@@ -15,9 +15,7 @@ pipeline {
             steps {
                 script {
                     app = docker.build("rajadockerimages/train-schedule")
-                    app.inside {
-                        sh 'echo $(curl localhost:8080)'
-                    }
+                   
                 }
             }
         }
